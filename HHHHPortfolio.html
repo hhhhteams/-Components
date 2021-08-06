@@ -1,0 +1,64 @@
+﻿<script src="https://hhhhteams.sharepoint.com/sites/HHHHTeams/Style%20Library/js/angular/Online/Components/HHHHPortfolio.js"></script>
+<div ng-controller="HHHHPortfolioController">
+    <div class="row Doc-align">
+
+        <div class="col-sm-2">Search in all</div>    <div class="col-sm-5">
+            <input id="searchinput" type="search" ng-model="searchinput" style='height: 30px;' placeholder="Search all..." class="form-control searchbox_height">
+            <span class="searchclear" style="left:93%!important;top: 16px;" ng-click="clearControl('searchinput')">X</span>
+        </div>
+
+        <div class="col-sm-2">
+            <a data-ng-click="ClearFilters()" class="hreflink pull-right">Clear All <img ng-src="/_layouts/images/delete.gif"></a>
+        </div>
+    </div>
+    <div class="col-sm-12 mb-10">
+
+
+
+    </div>
+    <div id="portfolio">
+        <div class="container form-group headcontainer display_hide">
+            <div class="" col-sm-12">
+                <div class="col-sm-10"></div>
+                <div class="col-sm-1 padL-0">
+                    <button type="button" class="btn btn-primary" ng-click="ShowUpdatePopup()">Import Column</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <button type="button" class="btn btn-primary" ng-click="Parentconfiguartion()">Update ParentId</button>
+    <!--*******************************************************************************************************-->
+    <div id="ImportExcelData" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: none;">
+        <div class="modal-dialog">
+            <div class="panel panel-default">
+                <div class="panel-title">
+                    <button type="button" class="close" data-dismiss="modal" ng-click="CloseUpdatecolumn()" style="min-width: 10px;">&times;</button>
+                    <h3>Import Excel Data</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="section-event">
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="col-sm-8"><input type="file" id="excelfile" /></div>
+                                <div class="col-sm-4"><!--<button class="btn btn-primary pull-right" type="button" id="viewfile" ng-click="ImportMasterTask()">Import Excel Data</button>--></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-sm-12 PadR0 mt-10">
+                        <span ng-disabled="showButton"> <button class="btn btn-primary" type="button" ng-click="ImportMasterTask()">Import Column</button></span>
+                        <button type="button" ng-click="CloseUpdatecolumn()" class="btn btn-default">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--*********************************************************************************************************************************************************-->
+
+</div>
